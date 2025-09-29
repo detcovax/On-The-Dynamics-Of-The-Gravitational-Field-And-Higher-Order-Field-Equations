@@ -343,7 +343,11 @@ This formulation offers several advantages for quantization. The model naturally
 In contrast, GR's action (based on the Ricci scalar $R$) and its direct quantization face several challenges. GR is notoriously difficult to renormalize due to its non-polynomial dependence on the metric~\cite{deser_2009}. Traditional approaches to quantizing GR often struggle with background independence~\cite{reuter_2009,ashtekar_2009,ashtekar_2004,read_2023}. Perturbative expansions in GR can lead to divergences that are challenging to handle~\cite{deser_1957}. This model's closer alignment with the structure of gauge theories potentially offers a more promising path towards a quantum theory of gravity, addressing some of the key obstacles faced in quantizing GR directly.
 
 \section*{Conclusions}
-By reframing the gravitational field as Popalawski did, formulating the Lagrangian similar to other field theories, and analyzing the Euler-Lagrange equations, I was able to show Einstein's field equations are a weak field limit approximation and the corrections geometrically account for the difference between cannonical GR and observations. Gloabl corrections -> expansion. Local corrections -> galactic velocities. These results means dark matter and dark energy are not be required in a modern model of gravity.
+In this work I have shown that by reframing the gravitational field in the spirit of Poplawski by treating the affine connection as the fundamental dynamical variable and taking the curvature tensor as the field strength, using an action built from the squared norm of that field strength, $S=\int{R_{abcd}R^{abcd}D^4x}$, deriving the Euler–Lagrange equations for the connection and, by varying the metric, obtaining the metric field equations (Eq. 16), working with a background-field decomposition $g_{ab}=\eta_{ab}+h_{ab}$, and carrying out a linearized analysis about a maximally symmetric background, the canonical Einstein field equations re-emerge as a limiting (weak-field / small-local-curvature) approximation of the full theory. In other words, standard GR appears as the low-order approximation of a broader geometric framework rather than as the unique description of gravity at all scales.
+
+The fuller gravitational equations contain corrections to the Einsteinian description. On cosmological (global) scales the extra geometric terms behave like an effective cosmological constant giving a small, positive effective curvature consistent with the observed accelerated expansion. Thus the model provides a purely geometric mechanism that can reproduce the phenomenology normally attributed to dark energy without introducing an ad hoc vacuum term. On local (galactic) scales the linearized equations around a spherically symmetric background produce a Yukawa-type modification of the Schwarzschild solution and a modified Newtonian potential of the form $\Phi(r) = -\frac{GM}{r} - G M e^{-\frac{\ln(r_d)}{r_d} r}$. The characteristic length scale $r_d$ can be made consistent with the findings of D'Agostino which showed the Yukawa correction can account for the flattening of galactic rotation curves without dark-matter halos when $r_d=0.740^{+0.082-0.088}$kpc.
+
+In summary, the affine, squared-curvature formulation reproduces Einstein’s field equations in the appropriate limit, produces geometric corrections that can account for accelerated expansion and galaxy rotation-curve anomalies without introducing new forms of matter or energy, and offers a promising route toward a modern field-theoretic description of gravity. These results mean dark matter and dark energy are not be required in a modern model of gravity.
 
 \appendix
 
@@ -351,8 +355,8 @@ By reframing the gravitational field as Popalawski did, formulating the Lagrangi
 \section{Derivation of the Metric Field Equations of the Squared Norm}\label{app.derv_metric_field_eqs}
 \begin{equation*}
 \begin{aligned}
-    \mathcal{L} &= \mathcal{R}_{abcd} R^{abcd} \\
-    \delta \mathcal{L} &= 2 \delta \mathcal{R}_{abcd} \cdot R^{abcd}
+    \mathcal{L} &= \mathcal{R}_{abcd} \mathcal{R}^{abcd} \\
+    \delta \mathcal{L} &= 2 \delta \mathcal{R}_{abcd} \cdot \mathcal{R}^{abcd}
 \end{aligned}
 \end{equation*}
 \begin{equation*}
@@ -364,53 +368,53 @@ By reframing the gravitational field as Popalawski did, formulating the Lagrangi
 \end{equation*}
 substitute this into $\delta \mathcal{L}$,
 \begin{align*}
-    \delta \mathcal{L} &= 2\left( \frac{1}{2} D_c (D_a \delta g_{bd} - D_b \delta g_{da} - 2 D_d \delta g_{ab}) - \frac{1}{2} D_d (D_a \delta g_{bc} - D_b \delta g_{da} - 2 D_c \delta g_{ab}) \right) R^{abcd} \\
-    &= \left( D_c (D_a \delta g_{bd} - D_b \delta g_{da} - 2 D_d \delta g_{ab}) - D_d (D_a \delta g_{bc} - D_b \delta g_{da} - 2 D_c \delta g_{ab}) \right) R^{abcd}
+    \delta \mathcal{L} &= 2\left( \frac{1}{2} D_c (D_a \delta g_{bd} - D_b \delta g_{da} - 2 D_d \delta g_{ab}) - \frac{1}{2} D_d (D_a \delta g_{bc} - D_b \delta g_{da} - 2 D_c \delta g_{ab}) \right) \mathcal{R}^{abcd} \\
+    &= \left( D_c (D_a \delta g_{bd} - D_b \delta g_{da} - 2 D_d \delta g_{ab}) - D_d (D_a \delta g_{bc} - D_b \delta g_{da} - 2 D_c \delta g_{ab}) \right) \mathcal{R}^{abcd}
 \end{align*}
 to get similar indices and pull out a variation of the metric tensor let us make the substitution (note that $\mathds{1}$ is an identity matrix): $D_c D_a \delta g_{bd} \rightarrow (\mathds{1}^n_b \mathds{1}^m_d D_c D_a) \delta g_{nm}$,
 \begin{equation*}
-    \delta \mathcal{L} = \left( D_c (\mathds{1}^n_b \mathds{1}^m_d D_a + \mathds{1}^n_d \mathds{1}^m_a D_b - 2 \cdot \mathds{1}^n_a \mathds{1}^m_b D_d) - D_d (\mathds{1}^n_b \mathds{1}^m_c D_a + \mathds{1}^n_c \mathds{1}^m_a D_b - 2 \cdot \mathds{1}^n_a \mathds{1}^m_b D_c) \right) \delta g_{nm} R^{abcd}
+    \delta \mathcal{L} = \left( D_c (\mathds{1}^n_b \mathds{1}^m_d D_a + \mathds{1}^n_d \mathds{1}^m_a D_b - 2 \cdot \mathds{1}^n_a \mathds{1}^m_b D_d) - D_d (\mathds{1}^n_b \mathds{1}^m_c D_a + \mathds{1}^n_c \mathds{1}^m_a D_b - 2 \cdot \mathds{1}^n_a \mathds{1}^m_b D_c) \right) \delta g_{nm} \mathcal{R}^{abcd}
 \end{equation*}
-remembering this is all taking place under an integral we can use integration by parts to change from a derivative of $\delta g_{nm}$ to a derivative of $R^{abcd}$,
+remembering this is all taking place under an integral we can use integration by parts to change from a derivative of $\delta g_{nm}$ to a derivative of $\mathcal{R}^{abcd}$,
 \begin{equation*}
-    \delta \mathcal{L} = \left( \left( D_c (\mathds{1}^n_b \mathds{1}^m_d D_a + \mathds{1}^n_d \mathds{1}^m_a D_b - 2 \cdot \mathds{1}^n_a \mathds{1}^m_b D_d) - D_d (\mathds{1}^n_b \mathds{1}^m_c D_a + \mathds{1}^n_c \mathds{1}^m_a D_b - 2 \cdot \mathds{1}^n_a \mathds{1}^m_b D_c) \right) R^{abcd} \right) \delta g_{nm}
+    \delta \mathcal{L} = \left( \left( D_c (\mathds{1}^n_b \mathds{1}^m_d D_a + \mathds{1}^n_d \mathds{1}^m_a D_b - 2 \cdot \mathds{1}^n_a \mathds{1}^m_b D_d) - D_d (\mathds{1}^n_b \mathds{1}^m_c D_a + \mathds{1}^n_c \mathds{1}^m_a D_b - 2 \cdot \mathds{1}^n_a \mathds{1}^m_b D_c) \right) \mathcal{R}^{abcd} \right) \delta g_{nm}
 \end{equation*}
 \begin{equation*}
-    \frac{\delta \mathcal{L}}{\delta g_{nm}} = \left( \left( D_c (\mathds{1}^n_b \mathds{1}^m_d D_a + \mathds{1}^n_d \mathds{1}^m_a D_b - 2 \cdot \mathds{1}^n_a \mathds{1}^m_b D_d) - D_d (\mathds{1}^n_b \mathds{1}^m_c D_a + \mathds{1}^n_c \mathds{1}^m_a D_b - 2 \cdot \mathds{1}^n_a \mathds{1}^m_b D_c) \right) R^{abcd} \right)
+    \frac{\delta \mathcal{L}}{\delta g_{nm}} = \left( \left( D_c (\mathds{1}^n_b \mathds{1}^m_d D_a + \mathds{1}^n_d \mathds{1}^m_a D_b - 2 \cdot \mathds{1}^n_a \mathds{1}^m_b D_d) - D_d (\mathds{1}^n_b \mathds{1}^m_c D_a + \mathds{1}^n_c \mathds{1}^m_a D_b - 2 \cdot \mathds{1}^n_a \mathds{1}^m_b D_c) \right) \mathcal{R}^{abcd} \right)
 \end{equation*}
-distributing $R^{abcd}$,
+distributing $\mathcal{R}^{abcd}$,
 \begin{equation*}
 \begin{aligned}
-    \frac{\delta \mathcal{L}}{\delta g_{nm}} = &D_c \mathds{1}^n_b \mathds{1}^m_d D_a R^{abcd} + D_c \mathds{1}^n_d \mathds{1}^m_a D_b R^{abcd} - 2 D_c \mathds{1}^n_a \mathds{1}^m_b D_d R^{abcd} \\
-    &- D_d \mathds{1}^n_b \mathds{1}^m_c D_a R^{abcd} - D_d \mathds{1}^n_c \mathds{1}^m_a D_b R^{abcd} + 2 D_d \mathds{1}^n_a \mathds{1}^m_b D_c R^{abcd} \\
-    = &D_c D_a R^{ancm} + D_c D_b R^{mbcn} - 2 D_c D_d R^{nmcd} \\
-    &- D_d D_a R^{anmd} - D_d D_b R^{mbnd} + 2 D_d D_c R^{nmcd}
+    \frac{\delta \mathcal{L}}{\delta g_{nm}} = &D_c \mathds{1}^n_b \mathds{1}^m_d D_a \mathcal{R}^{abcd} + D_c \mathds{1}^n_d \mathds{1}^m_a D_b \mathcal{R}^{abcd} - 2 D_c \mathds{1}^n_a \mathds{1}^m_b D_d \mathcal{R}^{abcd} \\
+    &- D_d \mathds{1}^n_b \mathds{1}^m_c D_a \mathcal{R}^{abcd} - D_d \mathds{1}^n_c \mathds{1}^m_a D_b \mathcal{R}^{abcd} + 2 D_d \mathds{1}^n_a \mathds{1}^m_b D_c \mathcal{R}^{abcd} \\
+    = &D_c D_a \mathcal{R}^{ancm} + D_c D_b \mathcal{R}^{mbcn} - 2 D_c D_d \mathcal{R}^{nmcd} \\
+    &- D_d D_a \mathcal{R}^{anmd} - D_d D_b \mathcal{R}^{mbnd} + 2 D_d D_c \mathcal{R}^{nmcd}
 \end{aligned}
 \end{equation*}
 reordering some indices and observing symmetries of the Riemann tensor,
 \begin{equation*}
 \begin{aligned}
-    \frac{\delta \mathcal{L}}{\delta g_{nm}} = &D_b D_a R^{namb} - D_b D_a R^{manb} - 2 D_a D_b R^{nmab} \\
-    &+ D_b D_a R^{namb} - D_a D_b R^{mbna} + 2 D_b D_a R^{nmab}
+    \frac{\delta \mathcal{L}}{\delta g_{nm}} = &D_b D_a \mathcal{R}^{namb} - D_b D_a \mathcal{R}^{manb} - 2 D_a D_b \mathcal{R}^{nmab} \\
+    &+ D_b D_a \mathcal{R}^{namb} - D_a D_b \mathcal{R}^{mbna} + 2 D_b D_a \mathcal{R}^{nmab}
 \end{aligned}
 \end{equation*}
 \begin{equation*}
 \begin{aligned}
     \frac{\delta \mathcal{L}}{\delta g_{nm}} &=
-    \left( D_b D_a R^{namb} + D_b D_a R^{namb} \right)
-    - \left( D_b D_a R^{manb}  - D_a D_b R^{mbna}\right)
-    - \left( 2 D_a D_b R^{nmab} + 2 D_b D_a R^{nmab} \right) \\
-    &= 2 D_b D_a R^{namb} - 2 D_b D_a R^{manb} - 2 D_{[a} D_{b]} R^{nmab} \\
-    &= -2 D_{[b} D_{a]} R^{namb} - 2 D_{[a} D_{b]} R^{nmab} \\
-    &= - 2 D_{[a} D_{b]} \left( R^{namb} + R^{nmab} \right)
+    \left( D_b D_a \mathcal{R}^{namb} + D_b D_a \mathcal{R}^{namb} \right)
+    - \left( D_b D_a \mathcal{R}^{manb}  - D_a D_b \mathcal{R}^{mbna}\right)
+    - \left( 2 D_a D_b \mathcal{R}^{nmab} + 2 D_b D_a \mathcal{R}^{nmab} \right) \\
+    &= 2 D_b D_a \mathcal{R}^{namb} - 2 D_b D_a \mathcal{R}^{manb} - 2 D_{[a} D_{b]} \mathcal{R}^{nmab} \\
+    &= -2 D_{[b} D_{a]} \mathcal{R}^{namb} - 2 D_{[a} D_{b]} \mathcal{R}^{nmab} \\
+    &= - 2 D_{[a} D_{b]} \left( \mathcal{R}^{namb} + \mathcal{R}^{nmab} \right)
 \end{aligned}
 \end{equation*}
 \begin{equation*}
-    D_{[a} D_{b]} R^{namb} = -\frac{1}{2} \mathcal{R}_{ab}R^{namb}
+    D_{[a} D_{b]} \mathcal{R}^{namb} = -\frac{1}{2} \mathcal{R}_{ab}\mathcal{R}^{namb}
 \end{equation*}
 \begin{equation*}
 \boxed{
-    \frac{\delta \mathcal{L}}{\delta g_{nm}} = \mathcal{R}_{ab} R^{namb} + 2 D_{[a} D_{b]} R^{nmab}
+    \frac{\delta \mathcal{L}}{\delta g_{nm}} = \mathcal{R}_{ab} \mathcal{R}^{namb} + 2 D_{[a} D_{b]} \mathcal{R}^{nmab}
 }
 \end{equation*}
 \end{fleqn}

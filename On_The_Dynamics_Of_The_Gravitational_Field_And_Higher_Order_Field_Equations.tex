@@ -18,7 +18,7 @@
 \date{\today}
 
 \begin{abstract}
-    Einstein's General Relativity, while extraordinarily successful in explaining gravitational phenomena, faces challenges in reconciling with quantum mechanics and addressing certain cosmological observations. I present a higher order model of gravitation that reframes the gravitational field in terms of the connection, with the curvature tensor as the field strength. The action in this model is based on the squared norm of the field strength, mirroring the structure of other Standard Model interactions. This approach offers potential advantages for quantization and renormalizability. Through analysis of the Euler-Lagrange equations in the gravitational sector, particularly focusing on the metric equations, I demonstrate that Einstein's field equations emerge as a limiting case within a more comprehensive theoretical framework. This broader theory may provide explanations for observed experimental discrepancies in cosmology while maintaining consistency with established gravitational phenomena. This model thus offers a promising avenue for addressing current challenges in gravitational physics and cosmology.
+    Einstein's General Relativity, while extraordinarily successful in explaining gravitational phenomena, faces challenges addressing certain cosmological observations demonstrated by galaxy roation curves and the expansion of the universe. 2014 Poplawski presented a higher order model of gravitation that reframes the gravitational field in terms of the connection, with the curvature tensor as the field strength. I reconsider the action in this model is based on the squared norm of the field strength. Through analysis of the Euler-Lagrange equations, particularly focusing on the metric equations, I demonstrate that Einstein's field equations emerge as a limiting case within a more comprehensive framework. Analyzing the field equations of the gravitational field, as the connection, I calculate corrections. Global corrections produce a term that replaces the dark energy sector with a geometric term. Local corrections take the form of a Yukawa potential. D'Agostino et al. showed that a Yukawa correction can account for the rotational velocities of galaxies without dark matter. Thus this broader framework provides explanations for observed experimental discrepancies without exotic materia, while maintaining consistency with established gravitational phenomena.
 \end{abstract}
 
 \maketitle
@@ -35,12 +35,14 @@ Dark Matter and Dark Energy: The necessity of dark matter to explain galactic ro
 
 Quantum Gravity: The EFEs, while extraordinarily successful in describing gravity at macroscopic scales, are fundamentally classical in nature. They do not incorporate quantum mechanics, leading to breakdowns at very small scales and high energies, such as those found in black holes or the early universe. Moreover, GR has resisted attempts at quantization, suggesting that a more fundamental theory—one that is naturally amenable to quantization and renormalization—may be necessary~\cite{wald_1984,rovelli_2004,hawking_1973}.
 
-In this paper, I present a mathematical framework that builds upon Einstein's foundational work while addressing these critical challenges. My approach aims to reconcile the observed cosmological differences with theoretical predictions without resorting to the introduction of exotic forms of matter or energy. Furthermore, it lays the groundwork for a theory that is more naturally suited to quantization, potentially bridging the gap between gravity and quantum mechanics.
+In 2014 Poplawski presented a reframing of Einstein's original GR by taking the connection by itself, without assuming a prior metric, is the fundamental dynamical variable for gravitation and the field strength is built from the curvature and torsion of that connection. The Lagrangian is constructed purely in terms of the connection (via its curvature and torsion), not assuming a metric in advance. This formulation reframes gravity more in terms of connection and curvature, rather than metric first~\cite{poplawski_2014}.
 
-In the following section, I will introduce the mathematical framework, which extends the EFEs in a way that naturally accommodates the observed cosmological phenomena. This approach paves the way for a more complete description of gravitational interactions across all scales—from the quantum realm to the largest structures in the universe.
+In this paper, I consider Poplawski's mathematical framework that builds upon Einstein's foundational work while addressing these critical challenges. My approach aims to reconcile the observed cosmological differences with theoretical predictions without resorting to the introduction of exotic forms of matter or energy.
+
+In the following section I will reintroduce the mathematical framework, which extends the EFEs in a way that naturally accommodates the observed cosmological phenomena and paves the way for a more complete description of gravitational interactions across all scales.
 
 \section{From Einstein to a modern field theory}
-\subsection*{Einstein Field Equations}
+\subsection*{A Resume of General Relativity}
 When Einstein first wrote down the field equations of his general theory of relativity in action form, he proposed the Lagrangian~\cite{Einstein_1915,Einstein_1916},
 \begin{equation}\label{Einstein_1915}
     L = g^{\mu\nu} \christoffel{\alpha}{\mu}{\beta} \christoffel{\beta}{\nu}{\alpha}
@@ -64,7 +66,7 @@ Varying this action with respect to the metric tensor yields the field equations
 \end{equation}
 here, $R_{\mu\nu}$ is called the Ricci curvature tensor.
 
-This result, however, was derived assuming that the spacetime is torsion-free~\cite{Einstein_1915,Einstein_1916,misner_2017,watanabe_2004}. Including torsion $\mathcal{T}$, the full affine connection is expressed as,
+This result, however, was derived assuming that the spacetime is torsion-free~\cite{Einstein_1915,Einstein_1916,misner_2017,watanabe_2004}. Including torsion $\mathcal{T}$ (defined by double of the antisymmetric part of the connection in its last two indices, i.e. $\mathcal{T}^{\alpha}_{\mu\nu}=\Gamma^{\alpha}_{\mu\nu} - \Gamma^{\alpha}_{\nu\mu}$), the full affine connection is expressed as,
 \begin{equation}\label{affine_connection}
     \Gamma^{\alpha}_{\mu\nu}=\frac{1}{2}g^{\alpha\sigma}(\partial_{\nu}g_{\sigma\mu}+\partial_{\mu}g_{\sigma\nu}-\partial_{\sigma}g_{\mu\nu} + \mathcal{T}_{\sigma\mu\nu}+\mathcal{T}_{\mu\nu\sigma}-\mathcal{T}_{\nu\sigma\mu})
 \end{equation}
@@ -75,9 +77,9 @@ In any holonomic basis, the affine connection completely describes the covariant
 
 Here one must find themselves at a crossroads. The field equations of Einstein-Cartan theory (\ref{EFEs} \& \ref{cartan_field_eq}) are found by varying with respect to the two parts of the connection independently, while treating the metric and torsion each as gravitational potential fields. One should ask: why not treat the entire affine connection as the gravitational potential and find an invariant action to vary with respect to the field represented by the affine connection?
 
-An action can be constructed in a form similar to that seen in other field theories. Specifically, I take a first-order derivative of the dynamic field and square it appropriately so as to ensure invariance with respect to some local symmetry~\cite{peskin_1995,weinberg_1995}, in this case, general coordinate transformations.
+Poplawski~\cite{poplawski_2014} used the same Einstein-Hilbert action but varied with respect to the affine connection. However, an action can be constructed in a form similar to that seen in other field theories. Specifically, I take a first-order derivative of the dynamic field and square it appropriately so as to ensure invariance with respect to some local symmetry~\cite{peskin_1995,weinberg_1995}, in this case, general coordinate transformations.
 
-In examining equation~\eqref{Einstein_1915}, I notice it appears that Einstein may have initially approached his model with this formulation in some manner, considering he treated the metric as the gravitational potential. However, given the limited exploration and popularization of this approach at the time, it is understandable that he was persuaded to adopt a more minimal scalar quantity. While this historical interpretation is intriguing, it is purely speculative on my part and not well-documented.
+In examining equation~\eqref{Einstein_1915}, I notice it appears that Einstein may have initially approached his model with this squared first derivative formulation in some manner, considering he treated the metric as the gravitational potential. However, given the limited exploration and popularization of this approach at the time, it is understandable that he was persuaded to adopt a more minimal scalar quantity. While this historical interpretation is intriguing, it is purely speculative on my part and not well-documented.
 
 \subsection*{Construction of The Affine Field Equations}
 I will start with the affine connection and take a derivative as follows,
@@ -101,6 +103,7 @@ the {\it field equations\/} are,
 \begin{equation}\label{higher_order_field_eq}
     D_\beta \mathcal{R}_\alpha^{\mu\beta\nu} = 0
 \end{equation}
+where $D_\alpha$ is the covariant derivative with respect to the curved connection with torsion.
 
 In addition to the field equations, one must pair with {\it equations of motion\/} to provide a description of the motion of a test particle in the field solved for in the field equations. In Einstein's general theory of relativity, the geodesic equation serves the role of this equation of motion~\cite{hauser_2019_1,hauser_2019_2,hauser_2019_3},
 \begin{equation}\label{geodesic_equation}
@@ -114,7 +117,7 @@ where $D\lambda$ is an invariant path element such that,
 \begin{equation}
     D\lambda \rightarrow \frac{D\lambda}{dx^\mu}dx^{\mu} \rightarrow d\lambda + \Gamma^{\mu}_{\mu\nu}\frac{dx^{\nu}}{d\lambda}d\lambda
 \end{equation}
-For a discussion on how this is similar to the canonical invariant element ($\sqrt{-g}d\lambda$), but more generalized, and a comparison with other models see Appendix~\ref{app.invariant_element}. Varying with respect to $x^{\mu}$, one finds,
+This is equivalent to the canonical invariant element ($\sqrt{-g}d\lambda$) in this case, but more generalized if extended and easier to work with below. Varying with respect to $x^{\mu}$, one finds,
 \begin{equation}\label{geodesic_deviation}
     \frac{d^2 x^\alpha}{d\lambda^2} + R^{\alpha}_{\beta\mu\nu}\frac{dx^\beta}{d\lambda}\frac{dx^\mu}{d\lambda}X^{\nu} = 0
 \end{equation}
@@ -292,7 +295,7 @@ Adding this to the Schwarzschild metric,
 \begin{equation}
     ds^2 = -\left( 1 - \frac{2GM}{c^2r} - Ae^{-\alpha r} \right) c^2 dt^2 + \left( 1 - \frac{2GM}{c^2r} - Ae^{-\alpha r} \right)^{-1} dr^2 + r^2 d\Omega^2
 \end{equation}
-$d\Omega$ captures the metric on the 2-sphere including any contributions that might arise from $h_{3}$ and $h_{4}$.
+$d\Omega$ captures the metric on the 2-sphere including any contributions that might arise from $h_{3}$ and $h_{4}$. One should not be surprised to find a Yukawa like correction here as it generally appears in the linearized limit of $f(R)$-type theories that have a non-zero second order term~\cite{capozziello_2009,stabile_2013,liu_2017,capozziello_2020,hurtado_2025}.
 \\
 \subsubsection*{Modified Newtonian Potential}
 Based on the corrections to the Schwarzschild metric found, the gravitational potential is modified with corrections to the Newtonian potential,
@@ -330,38 +333,21 @@ One place the Newtonian potential is insufficient to explain the gravitational e
     \caption{Plot of Orbital Velocities vs. $r$}
     \label{fig:graph_orbvelVr}
 \end{figure}
-the modified orbital velocity tends to the Keplerian expectation for large or small $r$, but around $r_d$ the orbital velocity has a bump (FIG.~\ref{fig:graph_orbvelVr}). Observations of orbital velocities show that velocities do not fall off purely exponentially as is the Keplerian expectation, but rather flatten out at some distance near the outer edges of the galactic spiral~\cite{navarro_1997,brownstein_2006}. The bump in orbital velocity calculated with corrections could align with the cosmological observations for the right choice of $r_d$. The exact value of $r_d$ for a given galaxy is a free parameter to be determined exactly by experiment. The calculated orbital velocities will need to be compared to empirical data to determine if the excepted and measured orbital velocities match without the need to add additional sources of mass such as dark matter.
+the modified orbital velocity tends to the Keplerian expectation for large or small $r$, but around $r_d$ the orbital velocity has a bump (FIG.~\ref{fig:graph_orbvelVr}). Observations of orbital velocities show that velocities do not fall off purely exponentially as is the Keplerian expectation, but rather flatten out at some distance near the outer edges of the galactic spiral~\cite{navarro_1997,brownstein_2006}. The bump in orbital velocity calculated with corrections ought align with the cosmological observations for the right choice of $r_d$. D'Agostino et al. demonstrate that the observed galactic rotation curves of the Milky Way and M31 (Andromeda) can be consistently explained within a Yukawa-modified gravitational framework, without invoking dark matter. Moreover, D'Agostino et al. highlight that the Yukawa scale length is constrained to be of order $\sim$kpc ($r_d=0.740^{+0.082-0.088}$kpc), setting a fundamental limit on its precise determination from galactic-scale data \cite{dagostino_2024}.
 
 \section{This Model of Gravity as a Gauge Theory}
-I would like to take this opportunity to present a brief review of the model presented and its comparison to the differential geometry of Standard Model gauge theory, highlighting why it might be better prepared for quantization compared to GR. This model reframes gravity in terms of the affine connection as the fundamental field, with the curvature tensor serving as the field strength. This approach bears striking similarities to the gauge theories of the Standard Model. In this model, the gravitational potential is represented by the affine connection $\Gamma$, analogous to the gauge potential $A$ in Yang-Mills theories~\cite{peskin_1995,hauser_2019_1,hauser_2019_2,hauser_2019_3}. The curvature tensor $R$ serves as the gravitational field strength, similar to the field strength tensor $F$ in gauge theories. The equations based on the squared norm of the field strength ($\mathcal{R}^\alpha_{\mu\beta\nu}\mathcal{R}_\alpha^{\mu\beta\nu}$), mirrors the Yang-Mills action ($F^{a}_{\mu\nu} F_{a}^{\mu\nu}$)~\cite{peskin_1995}.
+I would like to take this opportunity to present a brief review of the model presented and its comparison to the differential geometry of Standard Model gauge theory, highlighting why it might be better prepared for quantization compared to cannonical GR. This model reframes gravity in terms of the affine connection as the fundamental field, with the curvature tensor serving as the field strength. This approach bears striking similarities to the gauge theories of the Standard Model. In this model, the gravitational potential is represented by the affine connection $\Gamma$, analogous to the gauge potential $A$ in Yang-Mills theories~\cite{peskin_1995,hauser_2019_1,hauser_2019_2,hauser_2019_3}. The curvature tensor $R$ serves as the gravitational field strength, similar to the field strength tensor $F$ in gauge theories. The equations based on the squared norm of the field strength ($\mathcal{R}^\alpha_{\mu\beta\nu}\mathcal{R}_\alpha^{\mu\beta\nu}$), mirrors the Yang-Mills action ($F^{a}_{\mu\nu} F_{a}^{\mu\nu}$)~\cite{peskin_1995}.
 
 This formulation offers several advantages for quantization. The model naturally incorporates the geometric nature of gravity while maintaining a structure similar to other quantum field theories. The squared field strength in the action is a promising starting point for renormalization, as it is of the same form as renormalizable gauge theories. The model respects general coordinate invariance, analogous to gauge invariance in the Standard Model~\cite{hauser_2019_1,hauser_2019_2,hauser_2019_3}. The background field method used in this model ($g_{ab} = \eta_{ab} + h_{ab}$) is well-suited for perturbative quantum calculations~\cite{bern_2002}. This approach potentially allows for a more unified treatment of gravity with other fundamental forces.
 
-In contrast, GR's action (based on the Ricci scalar $R$) and its direct quantization face several challenges. GR is notoriously difficult to renormalize due to its non-polynomial dependence on the metric~\cite{deser_2009}. Traditional approaches to quantizing GR often struggle with background independence~\cite{reuter_2009,ashtekar_2009,ashtekar_2004,read_2023}. Perturbative expansions in GR can lead to divergences that are challenging to handle~\cite{deser_1957}. My model's closer alignment with the structure of gauge theories potentially offers a more promising path towards a quantum theory of gravity, addressing some of the key obstacles faced in quantizing GR directly.
+In contrast, GR's action (based on the Ricci scalar $R$) and its direct quantization face several challenges. GR is notoriously difficult to renormalize due to its non-polynomial dependence on the metric~\cite{deser_2009}. Traditional approaches to quantizing GR often struggle with background independence~\cite{reuter_2009,ashtekar_2009,ashtekar_2004,read_2023}. Perturbative expansions in GR can lead to divergences that are challenging to handle~\cite{deser_1957}. This model's closer alignment with the structure of gauge theories potentially offers a more promising path towards a quantum theory of gravity, addressing some of the key obstacles faced in quantizing GR directly.
+
+\section*{Conclusions}
+By reframing the gravitational field as Popalawski did, formulating the Lagrangian similar to other field theories, and analyzing the Euler-Lagrange equations, I was able to show Einstein's field equations are a weak field limit approximation and the corrections geometrically account for the difference between cannonical GR and observations. Gloabl corrections -> expansion. Local corrections -> galactic velocities. These results means dark matter and dark energy are not be required in a modern model of gravity.
 
 \appendix
 
 \begin{fleqn}
-
-\section{About the Invariant Element}\label{app.invariant_element}
-In standard GR the invariant element is commonly written as $\sqrt{-g}d\lambda$. Writing $D\lambda$ is more than merely a suppression of the invariance into a different symbolic notation. I write this to explicitly display it as similar to the covariant derivative,
-        
-\begin{equation*}
-    D\lambda = d\lambda + \Gamma^{\mu}_{\mu\nu}\frac{dx^{\nu}}{d\lambda}d\lambda
-\end{equation*}
-notice the similarity to the commonly used version through the following,
-\begin{equation*}
-    \frac{d}{dx^\nu}\sqrt{-g} = \Gamma^{\mu}_{\mu\nu}
-\end{equation*}
-so, this version is equivalent in the case used in this paper. But this version is more versatile and ready to be used in a unified field theory where the invariant element is more complicated, and the advantage comes in the way of using the covariant derivative to expand one's understanding,
-\begin{equation*}
-    D_\mu V^\nu = \frac{dV^\nu }{dx^\mu} + \Gamma^{\nu}_{\mu\alpha}V^\alpha + A_\mu V^\nu
-\end{equation*}
-\begin{equation*}
-    D\lambda = d\lambda + \Gamma^{\mu}_{\mu\nu}\frac{dx^{\nu}}{d\lambda}d\lambda + A_\nu \frac{dx^\nu}{d\lambda}d\lambda
-\end{equation*}
-where $A$ is another connection such as that of a gauge group in the Standard Model.
-
 \section{Derivation of the Metric Field Equations of the Squared Norm}\label{app.derv_metric_field_eqs}
 \begin{equation*}
 \begin{aligned}
@@ -427,12 +413,6 @@ reordering some indices and observing symmetries of the Riemann tensor,
     \frac{\delta \mathcal{L}}{\delta g_{nm}} = \mathcal{R}_{ab} R^{namb} + 2 D_{[a} D_{b]} R^{nmab}
 }
 \end{equation*}
-
-\section{Plot Orbital Velocity vs. Radius for Characteristic Radii}\label{app.plot_code}
-The following is the code used to create the plot in figure~\ref{fig:graph_orbvelVr}
-\\
-\lstinputlisting[language=python,breaklines=true,breakautoindent=true,numbers=left,frame=leftline]{velocity_curves.py}
-
 \end{fleqn}
 
 \bibliographystyle{apsrev4-2} % APS PRD style
